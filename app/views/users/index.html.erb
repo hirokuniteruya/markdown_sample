@@ -1,0 +1,44 @@
+<%
+  text = <<~TEXT
+    # 大見出し
+    ## 中見出し
+    ### 小見出し
+
+    - リスト
+    - リスト
+
+    1. 番号付きリスト
+    1. 番号付きリスト
+    1. 番号付きリスト
+
+    ### rubyコード
+    ```rb
+    puts "Hello World"
+    ```
+
+    ### htmlコード
+    ```html
+    <div>Hello World</div>
+    <p>マークダウンテスト</p>
+    <div class="table">
+      <table>
+        <tr>
+          <td>表のデータ</td>
+          <td>表のデータ</td>
+        </tr>
+      </table>
+    </div>
+    ```
+
+    ### css コード
+    ```css
+    .table {
+      background-color: green;
+      color: white;
+    }
+    ```
+
+  TEXT
+%>
+
+<%= markdown(text).html_safe %>
